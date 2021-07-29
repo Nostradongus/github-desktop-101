@@ -1,30 +1,45 @@
 /*
- * General Instructions:
- * (1) Supply the appropriate documentation.
- * (2) No need to touch the actual code, focus on documentation.
- * (3) As a hint, TODO statements are provided for you to know where documentation is needed.
- * (4) You may delete this after you are done.
+ * File Name: Bautista.ino
+ * 
+ * Description: 
+ * Test documentation
+ * 
+ * Author: Fatima Bautista
+ * 
+ * Last Modified: July 29, 2021
  */
 
-// TODO: Insert Source File Level documentation
+// Imports of "myLibrary.h"
+#include "Bautista.h"
 
-// TODO: In-Line documentation
-#include "myLibrary.h"
-#define FLAME_PIN 2
-#define NO_FIRE 1
-#define IS_FIRE 0
+// Fuctions as the pin for the flame sensor
+#define FLAME_PIN 2 
 
-// TODO: Function-level documentation
+// Flame Sensor return value when there is no fire
+#define NO_FIRE 1 
+
+// Flame Sensor return value when there is fire
+#define IS_FIRE 0 
+
+// This function setups the initial code of the program
 void setup() {
-  // TODO: In-Line documentation
-  Serial.begin (9600);
+/*
+ * Initializes the Serial Monitor
+ */
+  Serial.begin (9600); //makes the serial monitor run
 }
 
-// TODO: Function-level documentation
-void loop() {
-  // TODO: In-Line documentation
-  if (digitalRead (FLAME_PIN) == NO_FIRE) {
-    moveForward (3000);
+//This function loops the program inside the parameter
+void loop() { 
+/*
+ * This condition statement checks if there is fire or not
+ */
+
+ // if the Flame Sensor doesn't detect fire, the program will "moveForward"
+  if (digitalRead (FLAME_PIN) == NO_FIRE) { 
+    moveForward (3000); 
+
+ // if the Flame Sensor detects fire, the program will use the "blowfan" function
   } else {
     blowFan (2000);
   }
