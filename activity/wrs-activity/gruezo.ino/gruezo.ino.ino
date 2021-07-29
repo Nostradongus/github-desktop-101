@@ -21,6 +21,7 @@ void setup() {
 }
 
 // TODO: Function-level documentation
+// edit 
 void loop() {
   // TODO: In-Line documentation
   if (digitalRead (FLAME_PIN) == NO_FIRE) {
